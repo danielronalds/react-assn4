@@ -2,12 +2,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--bg);
+  background-color: var(--dark-bg);
 }
 
 #main {
   min-width: 700px;
-  background-color: var(--dark-bg);
+  background-color: var(--bg);
   padding: 10px;
   border: none;
   border-radius: 10px;

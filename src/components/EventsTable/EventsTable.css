@@ -1,15 +1,11 @@
 table {
-    width: 1200px;
+  width: 1200px;
 }
 
 th {
-    text-align: left;
+  text-align: left;
 }
 
-.delete-event {
-    fill: var(--destructive) !important;
-}
-
-.delete-event:hover {
-    fill: var(--destructive-hover) !important;
+td p {
+  max-width: 40ch;
 }

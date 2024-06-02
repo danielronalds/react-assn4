@@ -11,33 +11,53 @@ const EventsTable = ({ events, setEvents, search }) => {
 
   return (
     <table>
-      <tr>
-        <th><h3>Name</h3></th>
-        <th><h3>Description</h3></th>
-        <th><h3>Start Date</h3></th>
-        <th><h3>End Date</h3></th>
-      </tr>
-      {events
-        .filter((event) => {
-          return search.toLowerCase() == ""
-            ? event
-            : event.name.toLowerCase().includes(search.toLowerCase());
-        })
-        .map((event) => (
-          <tr key={event.id}>
-            <td><p>{event.name}</p></td>
-            <td><p>{event.description}</p></td>
-            <td><p>{event.startdate}</p></td>
-            <td><p>{event.enddate}</p></td>
-            <td>
-              <DeleteIcon
-                onClick={() => {
-                  deleteEvent(event.id);
-                }}
-              />
-            </td>
-          </tr>
-        ))}
+      <thead>
+        <tr>
+          <th>
+            <h3>Name</h3>
+          </th>
+          <th>
+            <h3>Description</h3>
+          </th>
+          <th>
+            <h3>Start Date</h3>
+          </th>
+          <th>
+            <h3>End Date</h3>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {events
+          .filter((event) => {
+            return search.toLowerCase() == ""
+              ? event
+              : event.name.toLowerCase().includes(search.toLowerCase());
+          })
+          .map((event) => (
+            <tr key={event.id}>
+              <td>
+                <p>{event.name}</p>
+              </td>
+              <td>
+                <p>{event.description}</p>
+              </td>
+              <td>
+                <p>{event.startdate}</p>
+              </td>
+              <td>
+                <p>{event.enddate}</p>
+              </td>
+              <td style={{ verticalAlign: "center" }}>
+                <DeleteIcon
+                  onClick={() => {
+                    deleteEvent(event.id);
+                  }}
+                />
+              </td>
+            </tr>
+          ))}
+      </tbody>
     </table>
   );
 };

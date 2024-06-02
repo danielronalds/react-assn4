@@ -1,17 +1,17 @@
 svg {
-    fill: var(--destructive) !important;
-    opacity: 75%;
-    transition: ease-out 0.2s;
-    width: 28px;
-    height: 28px;
-    margin: 2px; /* Margin reserves space for the growth of the icon*/
+  fill: var(--destructive) !important;
+  opacity: 75%;
+  transition: ease-out 0.2s;
+  width: 28px;
+  height: 28px;
+  margin: 2px; /* Margin reserves space for the growth of the icon*/
 }
 
 svg:hover {
-    fill: var(--destructive-hovered) !important;
-    opacity: 100%;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    margin: 0px;
+  fill: var(--destructive-hovered) !important;
+  opacity: 100%;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  margin: 0px;
 }
