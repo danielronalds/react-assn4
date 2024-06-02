@@ -1,0 +1,21 @@
+:root {
+  font-family: sans-serif;
+  /* Action Colours */
+  --positive: #58CC3E;
+  --positive-hovered: #67D150;
+  --destructive: #E43A4B;
+  --destructive-hovered: #E64553;
+
+  /* Text Colours */
+  --h1: #4C4F69;
+  --h2: #4C4F69;
+  --h3: #4C4F69;
+  --h4: #4C4F69;
+  --h5: #4C4F69;
+  --p: #4C4F69;
+
+  /* Background Colours */
+  --dark-bg: #DCE0E8;
+  --med-bg: #E6E9EF;
+  --bg: #EFF1F5;
+}
