@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
 import axios from "axios";
-import EventsTable from "./components/Search/EventsTable/EventsTable";
+import EventsTable from "./components/EventsTable/EventsTable";
 
 function App() {
   const [events, setEvents] = useState([]);
