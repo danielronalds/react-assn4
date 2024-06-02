@@ -19,7 +19,7 @@ function App() {
   return (
     <div id="main">
       <Header search={search} setSearch={setSearch}/>
-      <EventsTable events={events} search={search}/>
+      <EventsTable events={events} setEvents={setEvents} search={search}/>
     </div>
   );
 }

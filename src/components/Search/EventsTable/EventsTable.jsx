@@ -1,4 +1,13 @@
-const EventsTable = ({ events, search }) => {
+import axios from "axios";
+import trashcan from "../../../assets/trashcan.svg"
+const EventsTable = ({ events, setEvents, search }) => {
+
+  const deleteEvent = (id) => {
+    axios.delete("http://localhost:3000/events/" + id).then(() => {
+      setEvents(events.filter(event => event.id !== id)); 
+    });
+  }
+
   return (
     <table>
       <tr>
@@ -19,6 +28,7 @@ const EventsTable = ({ events, search }) => {
             <td>{event.description}</td>
             <td>{event.startdate}</td>
             <td>{event.enddate}</td>
+            <td><img src={trashcan} onClick={() => {deleteEvent(event.id)}} alt="Delete Event"/></td>
           </tr>
         ))}
     </table>
