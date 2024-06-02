@@ -1,21 +1,45 @@
 :root {
   font-family: sans-serif;
   /* Action Colours */
-  --positive: #58CC3E;
-  --positive-hovered: #67D150;
-  --destructive: #E43A4B;
-  --destructive-hovered: #E64553;
+  --positive: #58cc3e;
+  --positive-hovered: #67d150;
+  --destructive: #e43a4b;
+  --destructive-hovered: #e64553;
 
   /* Text Colours */
-  --h1: #4C4F69;
-  --h2: #4C4F69;
-  --h3: #4C4F69;
-  --h4: #4C4F69;
-  --h5: #4C4F69;
-  --p: #4C4F69;
+  --h1: #4c4f69;
+  --h2: #4c4f69;
+  --h3: #4c4f69;
+  --h4: #4c4f69;
+  --h5: #4c4f69;
+  --p: #4c4f69;
 
   /* Background Colours */
-  --dark-bg: #DCE0E8;
-  --med-bg: #E6E9EF;
-  --bg: #EFF1F5;
+  --dark-bg: #dce0e8;
+  --med-bg: #e6e9ef;
+  --bg: #eff1f5;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  color: #4c4f69;
+}
+h2 {
+  color: #4c4f69;
+}
+h3 {
+  color: #4c4f69;
+}
+h4 {
+  color: #4c4f69;
+}
+h5 {
+  color: #4c4f69;
+}
+p {
+  color: #4c4f69;
 }
