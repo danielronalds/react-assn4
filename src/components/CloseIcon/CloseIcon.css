@@ -1,0 +1,12 @@
+.close-icon {
+  fill: var(--destructive) !important;
+  opacity: 85%;
+  transition: ease-out 0.2s;
+  width: 28px;
+  height: 28px;
+}
+
+.close-icon:hover {
+  opacity: 100%;
+  cursor: pointer;
+}

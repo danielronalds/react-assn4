@@ -1,4 +1,4 @@
-svg {
+.delete-icon {
   fill: var(--destructive) !important;
   opacity: 75%;
   transition: ease-out 0.2s;
@@ -7,7 +7,7 @@ svg {
   margin: 2px; /* Margin reserves space for the growth of the icon*/
 }
 
-svg:hover {
+.delete-icon:hover {
   fill: var(--destructive-hovered) !important;
   opacity: 100%;
   cursor: pointer;

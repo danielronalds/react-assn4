@@ -1,11 +1,15 @@
+import NewIcon from "../NewIcon/NewIcon";
 import Search from "../Search/Search";
 import "./Header.css";
 
-const Header = ({ search, setSearch }) => {
+const Header = ({ search, setSearch, setShowNewEvent }) => {
   return (
     <div id="header">
       <h1>Event Browser</h1>
-      <Search search={search} setSearch={setSearch} />
+      <div id="leftbox">
+        <Search search={search} setSearch={setSearch} />
+        <NewIcon onClick={() => setShowNewEvent(true)} />
+      </div>
     </div>
   );
 };

@@ -25,13 +25,35 @@ const EventsTable = ({ events, setEvents, search }) => {
             <h3>Description</h3>
           </th>
           <th onClick={handleSort}>
-            <div style={{display: "flex", flexDirection:"row", alignItems: "center"}}>
-            <h3>Start Date</h3>
-            {isAscendingOrder ? (
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#4c4f69"><path d="m280-400 200-200 200 200H280Z"/></svg>
-            ) : (
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#4c4f69"><path d="M480-360 280-560h400L480-360Z"/></svg>
-            )}
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+              }}
+            >
+              <h3>Start Date</h3>
+              {isAscendingOrder ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill="#4c4f69"
+                >
+                  <path d="m280-400 200-200 200 200H280Z" />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill="#4c4f69"
+                >
+                  <path d="M480-360 280-560h400L480-360Z" />
+                </svg>
+              )}
             </div>
           </th>
           <th>
