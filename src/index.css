@@ -1,8 +1,6 @@
 :root {
   font-family: sans-serif;
   /* Action Colours */
-  --positive: #58cc3e;
-  --positive-hovered: #67d150;
   --destructive: #e43a4b;
   --destructive-hovered: #e64553;
 
@@ -16,8 +14,9 @@
 
   /* Background Colours */
   --dark-bg: #dce0e8;
-  --med-bg: #e6e9ef;
   --bg: #eff1f5;
+
+  --accent: #8839EF;
 }
 
 body {
@@ -26,20 +25,20 @@ body {
 }
 
 h1 {
-  color: #4c4f69;
+  color: var(--h1);
 }
 h2 {
-  color: #4c4f69;
+  color: var(--h2);
 }
 h3 {
-  color: #4c4f69;
+  color: var(--h3);
 }
 h4 {
-  color: #4c4f69;
+  color: var(--h4);
 }
 h5 {
-  color: #4c4f69;
+  color: var(--h5);
 }
 p {
-  color: #4c4f69;
+  color: var(--p);
 }

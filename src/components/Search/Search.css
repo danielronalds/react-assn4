@@ -3,21 +3,28 @@
   flex-direction: row;
   justify-content: center;
   gap: 8px;
-  border: 1px var(--p) solid;
+  border: 2px var(--accent) solid;
   border-radius: 6px;
   padding: 3px;
-  background-color: #e6e9ef;
+  background-color: var(--bg);
+  align-items: center;
 }
 
 #search-box input {
+  font-size: 16px;
   decoration: none;
-  background-color: #e6e9ef;
+  background-color: var(--bg);
   border: none;
+  padding: 5px;
 }
 
 #search-box input:focus {
   decoration: none;
   outline: none;
-  background-color: #e6e9ef;
+  background-color: var(--bg);
   border: none;
+}
+
+#search-box-icon {
+    fill: var(--accent) !important;
 }

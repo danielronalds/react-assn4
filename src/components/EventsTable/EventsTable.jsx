@@ -15,7 +15,7 @@ const EventsTable = ({ events, setEvents, search }) => {
   const handleSort = () => setIsAscendingOrder(!isAscendingOrder);
 
   return (
-    <table>
+    <table cellSpacing={0}>
       <thead>
         <tr>
           <th>

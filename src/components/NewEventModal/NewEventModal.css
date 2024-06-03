@@ -51,13 +51,16 @@
 #submit-button {
   margin-top: 10px;
   width: 100%;
-  border: none;
   padding: 8px;
-  background-color: #a6d189;
-  filter: brightness(100%);
+  border: var(--accent) 2px solid;
+  border-radius: 6px;
+  background-color: var(--bg);
+  color: var(--accent);
+  opacity: 85%;
+  transistion: ease-in-out 0.3s;
 }
 
 #submit-button:hover {
   cursor: pointer;
-  filter: brightness(95%);
+  opacity: 100%;
 }
