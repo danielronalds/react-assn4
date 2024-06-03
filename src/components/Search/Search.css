@@ -1,0 +1,23 @@
+#search-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 8px;
+  border: 1px var(--p) solid;
+  border-radius: 6px;
+  padding: 3px;
+  background-color: #e6e9ef;
+}
+
+#search-box input {
+  decoration: none;
+  background-color: #e6e9ef;
+  border: none;
+}
+
+#search-box input:focus {
+  decoration: none;
+  outline: none;
+  background-color: #e6e9ef;
+  border: none;
+}
