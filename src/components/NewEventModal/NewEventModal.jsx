@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./NewEventModal.css";
 import CloseIcon from "../CloseIcon/CloseIcon";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 const NewEventModal = ({ show, setShow, events, setEvents }) => {
   const [name, setName] = useState("");
@@ -47,12 +48,13 @@ const NewEventModal = ({ show, setShow, events, setEvents }) => {
       .then((res) => {
         events.push(res.data);
         setEvents(events);
+        toast.success("Added event!")
         // Resetting modal values and closing form
         handleClose();
       })
       .catch((err) => {
+        toast.error("Failed to add event!")
         console.log(err);
-        alert("An error occured!");
       });
   };
 
