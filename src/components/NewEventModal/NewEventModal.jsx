@@ -60,12 +60,12 @@ const NewEventModal = ({ show, setShow, events, setEvents }) => {
       .then((res) => {
         events.push(res.data);
         setEvents(events);
-        toast.success("Added event!")
+        toast.success("Added event!");
         // Resetting modal values and closing form
         handleClose();
       })
       .catch((err) => {
-        toast.error("Failed to add event!")
+        toast.error("Failed to add event!");
         console.log(err);
       });
   };
