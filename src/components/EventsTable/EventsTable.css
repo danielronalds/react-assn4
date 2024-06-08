@@ -4,7 +4,7 @@ table {
 
 th {
   text-align: left;
-  border-bottom: var(--accent) 2px solid;
+  border-bottom: var(--p) 3px solid;
 }
 
 td p {

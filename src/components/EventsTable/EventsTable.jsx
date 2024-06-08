@@ -59,6 +59,7 @@ const EventsTable = ({ events, setEvents, search }) => {
           <th>
             <h3>End Date</h3>
           </th>
+          <th />
         </tr>
       </thead>
       <tbody>
