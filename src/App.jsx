@@ -7,11 +7,11 @@ import NewEventModal from "./components/NewEventModal/NewEventModal";
 import { Toaster } from "react-hot-toast";
 
 function App() {
-  // The apps list of events
+  // State to store the apps list of events
   const [events, setEvents] = useState([]);
-  // The current search query
+  // State to store the current search query
   const [search, setSearch] = useState("");
-  // Whether to show the Event creation form
+  // State to store whether to show the Event creation form
   const [showNewEventModal, setShowNewEventModal] = useState(false);
 
   // Use effect for fetching the initial list of events

@@ -1,6 +1,12 @@
 import "./NewEventButton.css";
 
+/**
+ * Component that triggers the new event modal to be shown
+  *
+  * NOTE: click event is passed so that this icon could be reused in the future
+ */
 const NewEventButton = ({ onClick }) => {
+  // SVG grabbed from google material icons
   return (
     <div onClick={onClick} className={"new-event-button"}>
       <p>New</p>

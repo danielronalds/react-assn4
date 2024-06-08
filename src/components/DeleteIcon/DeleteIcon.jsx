@@ -1,6 +1,10 @@
 import "./DeleteIcon.css";
 
+/**
+ * Component for the delete button for removing an event
+ */
 const DeleteIcon = ({ onClick }) => {
+  // SVG grabbed from google material icons
   return (
     <svg
       className="delete-icon"

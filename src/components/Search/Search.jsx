@@ -1,6 +1,14 @@
 import "./Search.css";
 
+/**
+ * Component for the search box
+ *
+ * NOTE: State is lifted up to the parent so that it can be passed to the events table
+ */
 const Search = ({ search, setSearch }) => {
+  /**
+   * Handles the search content changing in the field
+   */
   const handleChange = (e) => setSearch(e.target.value);
 
   return (

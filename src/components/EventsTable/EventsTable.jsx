@@ -2,16 +2,34 @@ import axios from "axios";
 import DeleteIcon from "../DeleteIcon/DeleteIcon";
 import "./EventsTable.css";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
+/**
+ * Component that displays all the events retrieved from the database
+ */
 const EventsTable = ({ events, setEvents, search }) => {
+  // State for storing the sort order of the events
   const [isAscendingOrder, setIsAscendingOrder] = useState(true);
 
+  /**
+   * Handles the deletion of the an event with the given id
+   */
   const deleteEvent = (id) => {
+    // Calling the delete endpoint, and depending on whether it returns a correct error code, 
+    // refreshing the events table
     axios.delete("http://localhost:3000/events/" + id).then(() => {
+      const event = events.find((ev) => ev.id === id);
       setEvents(events.filter((event) => event.id !== id));
+      toast.success("Deleted " + event.name);
+    }).catch((err) => {
+      console.log(err);
+      toast.error("Failed to delete " + ev.name);
     });
   };
 
+  /**
+   * Handles the sorting of events by date
+   */
   const handleSort = () => setIsAscendingOrder(!isAscendingOrder);
 
   return (
@@ -33,7 +51,7 @@ const EventsTable = ({ events, setEvents, search }) => {
               }}
             >
               <h3>Start Date</h3>
-              {isAscendingOrder ? (
+              {isAscendingOrder ? ( // Picking different icons based on the current sort order
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   height="24px"
@@ -63,19 +81,19 @@ const EventsTable = ({ events, setEvents, search }) => {
         </tr>
       </thead>
       <tbody>
-        {events
+        {events // Filtering out events that are not in the search quiery
           .filter((event) => {
             return search.toLowerCase() == ""
-              ? event
+              ? event // If there is no search query, don't filter any events
               : event.name.toLowerCase().includes(search.toLowerCase());
           })
           .sort((a, b) => {
-            const dateA = new Date(a.startdate);
+            const dateA = new Date(a.startdate); 
             const dateB = new Date(b.startdate);
-
+            // Sorting by getting the difference between dates, swapped order if not ascending
             return isAscendingOrder ? dateA - dateB : dateB - dateA;
           })
-          .map((event) => (
+          .map((event) => ( // Mapping the events to display into a table row
             <tr key={event.id}>
               <td>
                 <p>{event.name}</p>
@@ -91,7 +109,8 @@ const EventsTable = ({ events, setEvents, search }) => {
               </td>
               <td style={{ verticalAlign: "center" }}>
                 <DeleteIcon
-                  onClick={() => {
+                  onClick={() => { 
+                    // As we need to pass a param, the function call is wrapped in a function
                     deleteEvent(event.id);
                   }}
                 />

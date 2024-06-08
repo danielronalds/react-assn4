@@ -4,24 +4,36 @@ import CloseIcon from "../CloseIcon/CloseIcon";
 import axios from "axios";
 import toast from "react-hot-toast";
 
+/**
+ * Component that holds the New Event modal
+ *
+ * Allows users to create new events to add to the event manager. Acts as a popup with some state
+ */
 const NewEventModal = ({ show, setShow, events, setEvents }) => {
+  // State variables for storing the forms input states
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
 
-  const clearForm = () => {
+  /**
+   * Handles the closing of the event modal
+   * 1. Clearing inputs
+   * 2. Hiding the modal
+   */
+  const handleClose = () => {
+    // Reseting the forms state
     setName("");
     setDescription("");
     setStartDate("");
     setEndDate("");
-  };
 
-  const handleClose = () => {
-    clearForm();
     setShow(false);
   };
 
+  /**
+   * Handles creating the event in the databse
+   */
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -32,7 +44,7 @@ const NewEventModal = ({ show, setShow, events, setEvents }) => {
       return;
     }
 
-    // Formatting the dates for the
+    // Formatting the dates to the sql format
     const formatedStartDate = startDate.replace("T", " ");
     const formatedEndDate = endDate.replace("T", " ");
 

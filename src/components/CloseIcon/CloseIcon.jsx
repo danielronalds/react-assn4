@@ -1,6 +1,10 @@
 import "./CloseIcon.css";
 
+/**
+ * Component that represents the close icon for the new event modal
+ */
 const CloseIcon = ({ onClick }) => {
+  /// SVG grabbed from google material icons
   return (
     <svg
       className={"close-icon"}

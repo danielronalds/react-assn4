@@ -2,6 +2,9 @@ import NewEventButton from "../NewEventButton/NewEventButton";
 import Search from "../Search/Search";
 import "./Header.css";
 
+/**
+ * Component for the top part of the application (Title bar, search bar, and new event button)
+ */
 const Header = ({ search, setSearch, setShowNewEvent }) => {
   return (
     <div id="header">
